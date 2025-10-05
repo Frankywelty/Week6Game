@@ -1,0 +1,6 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+git rm --cached -r .
+git reset
+git add .
+git commit -m "Normalize line endings"
