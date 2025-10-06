@@ -1,6 +1,22 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-git rm --cached -r .
-git reset
-git add .
-git commit -m "Normalize line endings"
+
+# Unity files - treat as binary
+*.unity merge=unityyamlmerge eol=lf
+*.prefab merge=unityyamlmerge eol=lf
+*.asset merge=unityyamlmerge eol=lf
+*.meta merge=unityyamlmerge eol=lf
+
+# Images - binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.psd binary
+
+# Fonts - binary
+*.ttf binary
+*.otf binary
+
+# Audio - binary
+*.mp3 binary
+*.wav binary
